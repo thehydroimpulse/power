@@ -11,7 +11,13 @@ extern fn begin_unwind() {}
 #[lang="sized"]
 pub trait Sized for Sized? {}
 
+mod device;
+mod devices {
+    mod mma7361;
+}
+
 #[no_mangle]
+#[start]
 pub unsafe extern fn main() {
     run();
     loop {};    
