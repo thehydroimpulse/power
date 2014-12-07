@@ -3,7 +3,14 @@
 name = "power"
 version = "0.0.1"
 authors = ["Daniel Fagnan <dnfagnan@gmail.com>"]
+build = "build.rs"
 
 [lib]
 name = "power"
-crate-type = ["rlib"]
+crate-type = ["staticlib"]
+
+[dependencies]
+rlibc = "*"
+
+[target.arm]
+rustc-flags = "-L /vagrant/build/"

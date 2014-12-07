@@ -1,2 +1,8 @@
 /target
+*.map
+*.a
+*.o
+*.rlib
+*.dylib
+.vagrant
 /Cargo.lock
