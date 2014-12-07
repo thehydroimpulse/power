@@ -16,13 +16,12 @@ mod device;
 mod devices {
     mod mma7361;
 }
+mod isr;
 
 #[no_mangle]
-#[start]
-pub fn main(argc: int, argv: *const *const u8) -> int {
+pub unsafe fn main() {
     run();
     loop {};
-    return 0;
 }
 
 fn run() {
